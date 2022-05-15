@@ -31,7 +31,9 @@ public class Cell {
 
     @Override
     public String toString() {
-        if (bomb) {
+        if (isCovered) {
+          return ".";
+        } else if (bomb) {
             return "*";
         } else {
             return String.valueOf(number);

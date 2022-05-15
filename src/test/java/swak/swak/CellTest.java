@@ -54,8 +54,21 @@ class CellTest {
     }
 
     @Test
+    void should_BeforeClick_ToString_Dot() {
+        // arrange
+        Cell cell0 = new Cell();
+        Cell cell1 = new Cell(1);
+
+        //act
+
+        // assert
+        assertEquals(".", cell0.toString());
+        assertEquals(".", cell1.toString());
+    }
+
+    @Test
     void should_AfterClick_Covered_False() {
-        // agrrange
+        // arrange
         Cell cell = new Cell();
 
         // act
@@ -63,6 +76,21 @@ class CellTest {
 
         // assert
         assertFalse(cell.isCovered());
+    }
 
+    @Test
+    void should_AfterClick_ToString_Number() {
+        // arrange
+        Cell cell0 = new Cell();
+        Cell cell1 = new Cell(1);
+
+
+        // act
+        cell0.click();
+        cell1.click();
+
+        // assert
+        assertEquals("0", cell0.toString());
+        assertEquals("1", cell1.toString());
     }
 }
