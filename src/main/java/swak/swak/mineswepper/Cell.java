@@ -19,18 +19,19 @@ public class Cell {
     }
 
     public Cell() {
-        this(false, null);
+        this(false, 0);
     }
 
     public Cell(Integer number) {
         this(false, number);
     }
 
-    public boolean isBomb() {
-        return bomb;
-    }
-
-    public Integer getNumber() {
-        return number;
+    @Override
+    public String toString() {
+        if (bomb) {
+            return "*";
+        } else {
+            return String.valueOf(number);
+        }
     }
 }

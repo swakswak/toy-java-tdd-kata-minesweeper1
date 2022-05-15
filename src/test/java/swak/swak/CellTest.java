@@ -15,10 +15,9 @@ class CellTest {
         Cell cell = new Cell(true);
 
         // act
-        boolean isBomb = cell.isBomb();
 
         // assert
-        assertTrue(isBomb);
+        assertEquals("*", cell.toString());
     }
 
     @Test
@@ -27,10 +26,9 @@ class CellTest {
         Cell cell = new Cell();
 
         // act
-        boolean isBomb = cell.isBomb();
 
         // asset
-        assertFalse(isBomb);
+        assertEquals("0", cell.toString());
     }
 
     @Test
@@ -39,9 +37,8 @@ class CellTest {
         Cell cell = new Cell(1);
 
         // act
-        Integer result = cell.getNumber();
 
         // asset
-        assertEquals(1, result);
+        assertEquals("1", cell.toString());
     }
 }
