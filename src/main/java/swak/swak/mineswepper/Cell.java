@@ -9,9 +9,12 @@ public class Cell {
 
     private final Integer number;
 
+    private boolean isCovered;
+
     private Cell(boolean bomb, Integer number) {
         this.bomb = bomb;
         this.number = number;
+        this.isCovered = true;
     }
 
     public Cell(boolean bomb) {
@@ -36,6 +39,10 @@ public class Cell {
     }
 
     public boolean isCovered() {
-        return true;
+        return isCovered;
+    }
+
+    public void click() {
+        this.isCovered = false;
     }
 }

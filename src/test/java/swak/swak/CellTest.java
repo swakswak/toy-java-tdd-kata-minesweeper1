@@ -44,12 +44,25 @@ class CellTest {
 
     @Test
     void should_BeforeClick_Covered_True() {
-        // arrance
+        // arrange
         Cell cell = new Cell();
 
         // act
 
         // assert
         assertTrue(cell.isCovered());
+    }
+
+    @Test
+    void should_AfterClick_Covered_False() {
+        // agrrange
+        Cell cell = new Cell();
+
+        // act
+        cell.click();
+
+        // assert
+        assertFalse(cell.isCovered());
+
     }
 }
