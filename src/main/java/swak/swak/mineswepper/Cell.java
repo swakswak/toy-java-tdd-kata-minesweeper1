@@ -34,4 +34,8 @@ public class Cell {
             return String.valueOf(number);
         }
     }
+
+    public boolean isCovered() {
+        return true;
+    }
 }

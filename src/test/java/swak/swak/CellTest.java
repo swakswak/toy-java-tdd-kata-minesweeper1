@@ -41,4 +41,15 @@ class CellTest {
         // asset
         assertEquals("1", cell.toString());
     }
+
+    @Test
+    void should_BeforeClick_Covered_True() {
+        // arrance
+        Cell cell = new Cell();
+
+        // act
+
+        // assert
+        assertTrue(cell.isCovered());
+    }
 }
