@@ -58,12 +58,14 @@ class CellTest {
         // arrange
         Cell cell0 = new Cell();
         Cell cell1 = new Cell(1);
+        Cell bomb = new Cell(true);
 
         //act
 
         // assert
         assertEquals(".", cell0.toString());
         assertEquals(".", cell1.toString());
+        assertEquals(".", bomb.toString());
     }
 
     @Test
@@ -83,14 +85,17 @@ class CellTest {
         // arrange
         Cell cell0 = new Cell();
         Cell cell1 = new Cell(1);
+        Cell bomb = new Cell(true);
 
 
         // act
         cell0.click();
         cell1.click();
+        bomb.click();
 
         // assert
         assertEquals("0", cell0.toString());
         assertEquals("1", cell1.toString());
+        assertEquals("*", bomb.toString());
     }
 }
