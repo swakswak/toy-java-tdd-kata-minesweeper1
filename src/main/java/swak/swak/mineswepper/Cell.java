@@ -5,7 +5,7 @@ package swak.swak.mineswepper;
  **/
 public class Cell {
 
-    private final boolean bomb;
+    private boolean bomb;
 
     private final Integer number;
 
@@ -50,5 +50,9 @@ public class Cell {
 
     public boolean isBomb() {
         return bomb;
+    }
+
+    public void setBomb() {
+        this.bomb = true;
     }
 }

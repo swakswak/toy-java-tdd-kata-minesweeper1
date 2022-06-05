@@ -1,7 +1,7 @@
 package swak.swak.mineswepper;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Stream;
 
 /**
@@ -28,6 +28,12 @@ public class Minefiled {
                 .limit((long) width * height)
                 .map(element -> new Cell())
                 .toList();
+
+        ThreadLocalRandom.current()
+                .ints(0, cells.size())
+                .distinct()
+                .limit(numberOfBombs)
+                .forEach(randomIndex -> cells.get(randomIndex).setBomb());
     }
 
     private void validateNumberOfBombs(int numberOfBombs) {
