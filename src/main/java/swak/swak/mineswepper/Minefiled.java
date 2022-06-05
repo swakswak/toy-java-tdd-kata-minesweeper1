@@ -4,9 +4,6 @@ import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Stream;
 
-/**
- * @author hyoseok choi (hschoi0702@gmail.com)
- **/
 public class Minefiled {
     private final List<Cell> cells;
     private final int width;

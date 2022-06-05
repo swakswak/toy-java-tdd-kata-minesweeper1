@@ -6,9 +6,6 @@ import swak.swak.mineswepper.Minefiled;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
- * @author hyoseok choi (hschoi0702@gmail.com)
- **/
 class MinefieldTest {
     @Test
     void should_ThrowsException_InvalidWidthOrInvalidHeight() {

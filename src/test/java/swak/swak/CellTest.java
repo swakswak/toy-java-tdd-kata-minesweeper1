@@ -5,9 +5,6 @@ import swak.swak.mineswepper.Cell;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
- * @author hyoseok choi (hschoi0702@gmail.com)
- **/
 class CellTest {
     @Test
     void should_Bomb_True() {

@@ -1,8 +1,5 @@
 package swak.swak.mineswepper;
 
-/**
- * @author hyoseok choi (hschoi0702@gmail.com)
- **/
 public class Cell {
 
     private boolean bomb;
