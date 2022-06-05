@@ -15,6 +15,7 @@ class CellTest {
         Cell cell = new Cell(true);
 
         // act
+        cell.click();
 
         // assert
         assertEquals("*", cell.toString());
@@ -26,6 +27,7 @@ class CellTest {
         Cell cell = new Cell();
 
         // act
+        cell.click();
 
         // asset
         assertEquals("0", cell.toString());
@@ -37,6 +39,7 @@ class CellTest {
         Cell cell = new Cell(1);
 
         // act
+        cell.click();
 
         // asset
         assertEquals("1", cell.toString());
