@@ -32,7 +32,7 @@ public class Cell {
     @Override
     public String toString() {
         if (isCovered) {
-          return ".";
+            return ".";
         } else if (bomb) {
             return "*";
         } else {
@@ -46,5 +46,9 @@ public class Cell {
 
     public void click() {
         this.isCovered = false;
+    }
+
+    public boolean isBomb() {
+        return bomb;
     }
 }

@@ -1,9 +1,8 @@
 package swak.swak;
 
 import org.junit.jupiter.api.Test;
+import swak.swak.mineswepper.Cell;
 import swak.swak.mineswepper.Minefiled;
-
-import java.lang.management.MonitorInfo;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -41,5 +40,21 @@ class MinefieldTest {
         // assert
         assertThrows(IllegalArgumentException.class, () -> new Minefiled(4, 4, 10));
         assertThrows(IllegalArgumentException.class, () -> new Minefiled(4, 4, 16));
+    }
+
+    @Test
+    void should_exactNumberOfMine() {
+        // arrange
+        final int numberOfBombs = 8;
+        Minefiled minefiled = new Minefiled(4, 4, numberOfBombs);
+
+        // act
+        long bombCount = minefiled.getCells()
+                .stream()
+                .filter(Cell::isBomb)
+                .count();
+
+        // assert
+        assertEquals(numberOfBombs, bombCount);
     }
 }
