@@ -13,6 +13,7 @@ public class Minefiled {
     private final int height;
 
     private final int maximumNumberOfBombs;
+    private final int numberOfBombs;
 
     public Minefiled(int width, int height, int numberOfBombs) {
         this.validateLength(width, height);
@@ -21,6 +22,8 @@ public class Minefiled {
 
         this.width = width;
         this.height = height;
+        this.numberOfBombs = numberOfBombs;
+
         this.cells = Stream.iterate(0, n -> n + 1)
                 .limit((long) width * height)
                 .map(element -> new Cell())
